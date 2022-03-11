@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keyboard_event</title>
+</head>
+<style>
+    img{
+        width: 150px;
+    }
+</style>
+<body>
+<img id="myImage" src="https://64.media.tumblr.com/881a237be0aca573489c620c103da21d/3998e8190c692235-5d/s500x750/1f2177ee04e9d725d55130bfa3f4ddad3a5cc078.png" alt="">
+</body>
+</html>
+<script>
+    let move=document.getElementById('myImage')
+    function init(){
+        move.style.position='relative'
+        move.style.top=0+'px'
+        move.style.left=0+'px'
+    } init()
+    function moveLeft(){
+        move.style.left=parseInt(move.style.left)-10+'px'
+    }
+    function moveRight(){
+        move.style.left=parseInt(move.style.left)+10+'px'
+    }
+    function moveUp(){
+        move.style.top=parseInt(move.style.top)-10+'px'
+    }
+    function moveDown(){
+        move.style.top=parseInt(move.style.top)+10+'px'
+    }
+    function moveDirection(abc){
+
+    switch (abc.keyCode){
+        case 37:
+            moveLeft()
+            break;
+            case 38:
+                moveUp()
+            break;
+                case 39:
+                    moveRight()
+            break;
+                    case 40:
+                        moveDown()
+            break;
+    }
+    }
+    function doReady(){
+        addEventListener("keydown", moveDirection)
+    }
+    doReady();
+
+</script>

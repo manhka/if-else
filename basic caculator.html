@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic caculator
+    </title>
+</head>
+<body>
+<input type="text" id="caculator"> <br>
+<button onclick="render(1)">1</button>
+<button onclick="render(2)">2</button>
+<button onclick="render(3)">3</button>
+<button onclick="render(4)">4</button>
+<br>
+<button onclick="render(5)">5</button>
+<button onclick="render(6)">6</button>
+<button onclick="render(7)">7</button>
+<button onclick="render(8)">8</button>
+<br>
+<button onclick="render(9)">9</button>
+<button onclick="render('+')">+</button>
+<button onclick="render('-')">-</button>
+<button onclick="render('*')">*</button>
+<br>
+<button onclick="render('/')">/</button>
+<button onclick="equal()">=</button>
+<button onclick="del()">DEL</button>
+<button onclick="ac()">AC</button>
+</body>
+</html>
+<script>
+// let arr=[]
+    function render(data){
+        document.getElementById('caculator').value+= data
+        // arr.push(document.getElementById('caculator').value)
+    }
+    function equal(){
+        document.getElementById('caculator').value=eval(document.getElementById('caculator').value)
+    }
+    function ac(){
+        document.getElementById('caculator').value=''
+    }
+    // function del(){
+    //     console.log('arr========',arr)
+    //     arr.splice(arr.length-1,1)
+    // }
+</script>

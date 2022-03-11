@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check number</title>
+</head>
+<body>
+<input type="number" id="num">
+<button onclick="check()">click</button>
+<hr>
+<b id="print"></b>
+<script>
+    function check() {
+        let num =parseInt(document.getElementById('num').value)
+        if(num<0){
+            document.getElementById('print').innerHTML= -1
+        }if (num>0){
+            document.getElementById('print').innerHTML=1
+        }
+    }
+</script>
+</body>
+</html>

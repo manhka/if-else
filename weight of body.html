@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weight of body</title>
+</head>
+<body>
+<h4>your weight</h4>
+<input type="number" id="weight">
+<br>
+<h4>your height</h4>
+<input type="number" id="height"> <br>
+<button onclick="checkWeight()">click</button>
+<hr>
+<b id="yourWeight">your weight is?</b>
+</body>
+</html>
+<script>
+
+    function checkWeight(){
+        let weight =parseFloat(document.getElementById('weight').value)
+        console.log('weight====',weight)
+        let height =parseFloat(document.getElementById('height').value)
+        console.log('height======',height)
+        let BMV= weight/(height*height)
+        console.log('BMV=====',BMV)
+        if (BMV<18){
+            document.getElementById('yourWeight').innerHTML='you are underweight now'}
+         if (BMV>=18 && BMV<25){
+            document.getElementById('yourWeight').innerHTML='you are normal now'}
+         if(BMV>= 25 && BMV<30){
+            document.getElementById('yourWeight').innerHTML='you are overweight now'}
+        if (BMV>30) {
+            document.getElementById('yourWeight').innerHTML = 'you are  obese now'
+        }
+    }
+</script>

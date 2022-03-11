@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clickMouseEvent</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+<button onclick="moveLeft()" id="left">LEFT</button>
+<button onclick="moveRight()" id="right">RIGHT</button>
+<button onclick="moveUp()" id="up">UP</button>
+<button onclick="moveDown()" id="down">DOWN</button>
+<img id="myImage" src="https://tse4.mm.bing.net/th?id=OIP.FB_esjO_nXeBDVYgw8b8EQHaE8&pid=Api&P=0&w=243&h=162" alt="">
+</body>
+</html>
+<script>
+    let move= document.getElementById('myImage')
+    function init(){
+        move.style.position='relative'
+       move.style.left=0+'px'
+       move.style.top=0+'px'
+    } init()
+    function moveLeft(){
+       move.style.left=parseInt(move.style.left)-10+'px'
+    }
+    function moveRight(){
+       move.style.left=parseInt(move.style.left)+10+'px'
+    }
+    function moveUp(){
+        move.style.top=parseInt(move.style.top)-10+'px'
+    }
+    function moveDown(){
+        move.style.top=parseInt(move.style.top)+10+'px'
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>conditionTo Login</title>
+</head>
+<body>
+<input type="text" id="enterName">
+<input type="text" id="enterPassword">
+<button onclick="check()">login</button>
+<br>
+<b id="render"></b>
+</body>
+</html>
+<script>
+    function check(){
+        let passWord=document.getElementById('enterPassword').value
+        let userName=document.getElementById('enterName').value
+        if(userName==='Admin'){
+            if (passWord==='TheMaster'){
+                document.getElementById('render').innerHTML= 'Welcome'
+            }else if (passWord==='null'){
+                document.getElementById('render').innerHTML='Cancled'
+            }else{
+                document.getElementById('render').innerHTML='Wrong Password'
+            }
+
+
+        }else if (userName==='null'){
+            document.getElementById('render').innerHTML='Wrong Password'
+        }else {
+            document.getElementById('render').innerHTML='I dont Know You '
+        }
+    }
+</script>
